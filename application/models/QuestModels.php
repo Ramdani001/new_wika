@@ -13,6 +13,7 @@ class QuestModels extends CI_Model {
        
         $this->db->select('*');
         $this->db->from($this->table);
+        $this->db->order_by('id_quest', 'DSC');
 
         if(isset($_POST['search']['value'])){
             $this->db->like('quest', $_POST['search']['value']);

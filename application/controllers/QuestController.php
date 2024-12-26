@@ -10,6 +10,13 @@ class QuestController extends CI_Controller {
         $this->load->model('QuestModels');
     }
 
+    public function GetAllQuest(){
+        $hasil = $this->QuestModels->getDataQuest();
+
+        $this->output->set_content_type('application/json')->set_output(json_encode($hasil));
+
+    }
+
     public function GetDataQuest(){
         $hasil = $this->QuestModels->getDataQuest();
 

@@ -41,203 +41,26 @@
             <b>Quesioner</b> Intership WIKA
         </h3>
 
-        <div class="p-3">
-            <p>
-                1. Apa alasan utama Anda tertarik untuk magang di perusahaan ini?
-            </p>
+        <form action="">
+            <div class="p-3" id="contentQuest">
 
-            <div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                    Untuk mendapatkan pengalaman kerja
-                    </label>
+                <div class="mb-4">
+                    <div>
+                        <p>Nama Lengkap : *</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="NamaLengkap" aria-describedby="basic-addon1" name="namaLengkap" id="namaLengkap" require>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Alamat Email : *</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Alamat Email Yang Dipakai Pembuatan Akun di WIKA INTERN" aria-label="email" aria-describedby="basic-addon1" name="email" id="email" require>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                    Untuk memperluas jaringan profesional
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_2">
-                    <label class="form-check-label" for="q1_2">
-                    Untuk meningkatkan keterampilan teknis atau non-teknis
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_3">
-                    <label class="form-check-label" for="q1_3">
-                    Lainnya
-                    </label>
-                </div>
-                <div class="input-group d-none" id="alasan_lainnya">
-                    <textarea class="form-control" aria-label="With textarea" placeholder="Alasan Lainnya" style="width: 100%;"></textarea>
-                </div>
+
             </div>
-
-            <!-- 2 -->
-            <div>
-                <p class="mt-2">
-                    2. Apakah bidang atau divisi tertentu di perusahaan yang menjadi minat utama Anda?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                    Ya
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                    Tidak
-                    </label>
-                </div>
-            </div>
-
-            <!-- 3 -->
-            <div>
-                <p class="mt-2">
-                    3. Seberapa yakin Anda dengan kemampuan teknis dan keterampilan yang dimiliki untuk mendukung tugas selama magang?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                     Tidak Yakin
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                     Sangat Yakin
-                    </label>
-                </div>
-
-            <!-- 4 -->
-            <div>
-                <p class="mt-2">
-                    4. Apakah Anda bersedia mengikuti jam kerja sesuai dengan aturan perusahaan? Jika tidak, sebutkan alasan Anda?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                     Ya
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                     Tidak
-                    </label>
-                </div>
-            </div>
-
-            <!-- 5 -->
-            <div>
-                <p class="mt-2">
-                    5. Adakah kebutuhan atau kondisi khusus yang harus perusahaan ketahui sebelum Anda memulai magang?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                     Ya
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                     Tidak
-                    </label>
-                </div>
-            </div>
-
-            <!-- 6 -->
-            <div>
-                <p class="mt-2">
-                    6. Apakah Anda siap bekerja di lapangan (site project) jika dibutuhkan selama program magang?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                     Ya
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                     Tidak
-                    </label>
-                </div>
-            </div>
-
-            <!-- 7 -->
-            <div>
-                <p class="mt-2">
-                    7. Seberapa yakin Anda dengan keterampilan yang Anda miliki untuk mendukung tugas selama magang di PT WIKA?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                     Tidak Yakin
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                     Sangat Yakin
-                    </label>
-                </div>
-            </div>
-
-            <!-- 8 -->
-            <div>
-                <p class="mt-2">
-                    8. Apakah anda akan mengikuti peraturan safety selama berada di kawasan?
-                </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1">
-                    <label class="form-check-label" for="q1">
-                     Ya
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0">
-                    <label class="form-check-label" for="q1_0">
-                     Tidak
-                    </label>
-                </div>
-            </div>
-
-            <!-- 9 -->
-            <div>
-                <p class="mt-2">
-                    9. Adakah kebutuhan atau kondisi khusus yang perlu diperhatikan oleh PT WIKA sebelum Anda memulai magang?
-                    <i>(Contoh: jadwal kuliah, kesehatan, atau transportasi)</i>
-                </p>
-                <div class="input-group" id="alasan_lainnya">
-                    <textarea class="form-control" aria-label="With textarea" placeholder="Alasan Lainnya" style="width: 100%;"></textarea>
-                </div>
-            </div>
-
-            <!-- 10 -->
-            <div>
-                <p class="mt-2">
-                    10. Adakah saran atau rekomendasi untuk meningkatkan program magang ini agar lebih bermanfaat bagi mahasiswa?
-                </p>
-                <div class="input-group" id="alasan_lainnya">
-                    <textarea class="form-control" aria-label="With textarea" placeholder="Alasan Lainnya" style="width: 100%;"></textarea>
-                </div>
-            </div>
-
-
-            <div class="p-4" style="display: flex; justify-content: end; gap: 10px;">
-                <button class="btn btn-secondary" type="button">
-                    <a href="<?= base_url(); ?>" style="text-decoration: none; color: white;">Cancel</a>
-                </button>
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </div>
-
-        </div>
+        </form>
 
     </div>
 
@@ -271,7 +94,7 @@
       <script src="<?php base_url() ?>assets/style/sweetalert/sweetalert2.js"></script>
       <script src="<?php base_url() ?>assets/style/sweetalert/sweetalert2.all.min.js"></script>
       
-      
+       
     <!-- My Script -->
     <script>
         $('#q1_3').on('click', function() {
@@ -289,6 +112,59 @@
         $('#q1_2').on('click', function() {
             $('#alasan_lainnya').addClass("d-none");
         });
+
+        $(document).ready(function() {
+            $.ajax({
+            type: "POST",
+            url: "<?= base_url('QuestController/GetAllQuest'); ?>",
+            success: function(response){
+                console.log(response);
+
+                response.forEach((element, index) => {
+                    var inpt = $('<p>');
+                    inpt.attr('name', element.id_quest);
+                    inpt.text( (index+1)+". "+element.quest);
+    
+                    $('#contentQuest').append(inpt);
+
+                    if(element.text_bebas == 1){
+                        var txtBebas = `<div class="input-group" id="alasan_lainnya">
+                        <textarea class="form-control" aria-label="With textarea" placeholder="`+element.quest+`" style="width: 100%;" name="`+element.id_quest+"-txtBebas"+`"></textarea>
+                    </div>`;
+
+                        $('#contentQuest').append(txtBebas);
+                    }else{
+
+                        var gnd = JSON.parse(element.ganda);
+
+                        gnd.forEach((e, i) => {
+                            if(e != ''){
+                                var ganda = `<div class="form-check">
+                                        <input class="form-check-input" type="radio" name="`+element.id_quest+`" id="`+element.id_quest+`">
+                                        <label class="form-check-label" for="q1">
+                                        `+e+`
+                                        </label>
+                                    </div>`;
+                            }
+                            $('#contentQuest').append(ganda);
+                        });
+                    }
+
+                });
+
+                $('#contentQuest').append(`<div class="p-4" style="display: flex; justify-content: end; gap: 10px;">
+                    <button class="btn btn-secondary" type="button">
+                        <a href="<?= base_url(); ?>" style="text-decoration: none; color: white;">Cancel</a>
+                    </button>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>`)
+
+
+
+            }
+        })
+        })
+
 
     </script>
 
