@@ -33,8 +33,6 @@ class View extends CI_Controller {
             'getSiswa' => $getSiswa->num_rows(),
             'getGuru' => $getGuru->num_rows(),
         ];
-        // var_dump($data);
-        // die();
 
         $this->load->view('templates/pages/Dashboard', $data);
     }
@@ -328,18 +326,20 @@ class View extends CI_Controller {
 
         $hasil = $this->serverSideModels->getDataTable();
         $filterGet = $this->input->get('Kehadiran');
-
         $user = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         
         $data = [];
-        $no = $_POST['start'] + 1;
-
+        $start = isset($_POST['start']) ? $_POST['start'] : 0;
+        $draw = isset($_POST['draw']) ? $_POST['draw'] : 1;
+        
+        $no = $start + 1;
+        
         if($filterGet == 'Kehadiran'){
-            if($user['roleId'] != 14){
+            if($user['roleId'] != 1){
                 foreach($hasil as $result){
-                    
                     if($user['divisi'] == $result->idDivisi){
                         if($result->isActive != 0 && $result->roleId != 1 && $result->roleId != 2){
+                            
                             $row = array();
                             $row[] = $no++;
                             $row[] = $result->nim;
@@ -349,8 +349,9 @@ class View extends CI_Controller {
                             $row[] = $result->namaDivisi;
                             $row[] = ($result->isActive != 1) ? "Tidak Aktif" : "Aktif";
                             $row[] = "<button type='button' onclick='modalDetail($result->id)' class='btn btn-primary'>Absen</button>";
-            
+                            
                             $data[] = $row;
+                            
                         }
                     }
                 }
@@ -369,9 +370,10 @@ class View extends CI_Controller {
                         $row[] = "<button type='button' onclick='modalDetail($result->id)' class='btn btn-primary'>Absen</button>";
         
                         $data[] = $row;
+                        
                     }
                 }
-            }
+            } 
         }else{
             
             foreach($hasil as $result){
@@ -390,11 +392,9 @@ class View extends CI_Controller {
                     $data[] = $row;
                 }
             }
-        }
-
-
+        } 
         $output = array(
-            "draw" => $_POST['draw'],
+            "draw" => $draw,
             "recordsTotal" => $this->serverSideModels->count_all_data(),
             "recordsFiltered" => $this->serverSideModels->count_filtered_data(),
             "data" => $data,
@@ -580,6 +580,11 @@ class View extends CI_Controller {
     public function PageQuest(){
         $this->userModels->security();  
         $this->load->view('templates/pages/PageQuest');
+    }
+
+    public function PageAns(){
+        $this->userModels->security();  
+        $this->load->view('templates/pages/PageAns');
     }
 
 

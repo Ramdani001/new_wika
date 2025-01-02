@@ -34,14 +34,14 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/style/css/style.css"> 
 </head>
 <body>
-    
+     
 
     <div class="mt-4 container border" style="width: 50%; height: 100%;">
         <h3 class="text-center">
             <b>Quesioner</b> Intership WIKA
         </h3>
 
-        <form action="">
+        <form action="<?= base_url() ?>QuestController/InsertAnswer" method="POST">
             <div class="p-3" id="contentQuest">
 
                 <div class="mb-4">
@@ -129,7 +129,7 @@
 
                     if(element.text_bebas == 1){
                         var txtBebas = `<div class="input-group" id="alasan_lainnya">
-                        <textarea class="form-control" aria-label="With textarea" placeholder="`+element.quest+`" style="width: 100%;" name="`+element.id_quest+"-txtBebas"+`"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" placeholder="`+element.quest+`" style="width: 100%;" name="`+element.id_quest+`"></textarea>
                     </div>`;
 
                         $('#contentQuest').append(txtBebas);
@@ -140,7 +140,7 @@
                         gnd.forEach((e, i) => {
                             if(e != ''){
                                 var ganda = `<div class="form-check">
-                                        <input class="form-check-input" type="radio" name="`+element.id_quest+`" id="`+element.id_quest+`">
+                                        <input class="form-check-input" type="radio" name="`+element.id_quest+`" id="`+element.id_quest+`" value="`+e+`">
                                         <label class="form-check-label" for="q1">
                                         `+e+`
                                         </label>

@@ -8,13 +8,51 @@ class QuestController extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('QuestModels');
+        $this->load->model('AnswerModels');
     }
-
+ 
     public function GetAllQuest(){
         $hasil = $this->QuestModels->getDataQuest();
 
         $this->output->set_content_type('application/json')->set_output(json_encode($hasil));
 
+    }
+
+    public function InsertAnswer(){
+
+        $inputData = $this->input->post();
+
+        // Jika keyMap bisa berasal dari sumber dinamis
+        $keyMap = isset($inputData['keyMap']) ? $inputData['keyMap'] : [];
+
+        // Transformasi array
+        $jsonData = [];
+        foreach ($inputData as $key => $value) {
+
+
+            if ($key !== 'namaLengkap' && $key !== 'email') {
+                $jsonData[$key] = $value;
+            }
+            
+        }
+
+        // Konversi ke JSON
+        $jsonOutput = json_encode($jsonData, JSON_PRETTY_PRINT);
+
+        $formatted_date = date('Y-m-d H:i:s', time()); // Formatkan timestamp ke 'Y-m-d H:i:s'
+            
+        $data = array(
+            'name' => $this->input->post('namaLengkap'),
+            'email' =>  $this->input->post('email'),
+            'answer' => $jsonOutput,
+            'tgl_dibuat' => $formatted_date
+        );
+
+        $query = $this->AnswerModels->InsertData('answer', $data);
+
+        if ($query) {
+            echo '<script>alert("Quesioner telah terkirim!"); window.close();</script>';
+        }
     }
 
     public function GetDataQuest(){
@@ -82,9 +120,6 @@ class QuestController extends CI_Controller {
                 'tgl_dibuat' => $formatted_date,
                 'updated' => $formatted_date
             );
-            
-            // var_dump($data);
-            // die();
 
             $query = $this->QuestModels->InsertData('quesioner', $data);
     

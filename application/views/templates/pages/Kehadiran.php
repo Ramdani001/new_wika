@@ -67,7 +67,7 @@
                             <button type="submit" class="btn btn-primary">Update</button>
                         </div>
                 </div>
-                                </form>
+                </form>
             </div>
         </div>
     </div>
@@ -75,6 +75,7 @@
 
  <script>
         $(document).ready(function() {
+
             $('#example').DataTable({
                 "processing": true,
                 "serverSide": true,
@@ -103,7 +104,6 @@
             data: dataToSend,
             url: "<?php echo base_url('View/detailUser?Kehadiran=Kehadiran'); ?>",
             success: function(response){
-
                 $('#modalDetail').modal('show');
 
                 // console.log(response.data);
@@ -154,6 +154,7 @@
                 }
               });
         }else{
+            
             console.log("Absen Click");
             $('#Absen').addClass('bg-custom');
             $('#Today').removeClass('bg-custom');

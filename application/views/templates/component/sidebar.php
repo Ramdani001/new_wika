@@ -87,10 +87,16 @@
                                 <span>Quesioner</span>
                             </div>               
                         </li>
+                        <li class="nav-item ">
+                            <div class="nav-link SuratBalasan listMenu collapsed" value="PageAns">
+                                <i class="fa-regular fa-newspaper"></i>
+                                <span>Answer</span>
+                            </div>               
+                        </li>
             </ul>
         <?php }else if($user['roleId'] == '2') {?>
             <ul class="nav flex-column">
-
+ 
                 <!-- Penugasa Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
